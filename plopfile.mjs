@@ -1,4 +1,4 @@
-module.exports = function (plop) {
+export default function (plop) {
     // create your generators here
     plop.setGenerator('basics', {
         description: 'this is a skeleton plopfile',

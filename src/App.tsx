@@ -1,41 +1,55 @@
 import {useState} from 'react'
-import reactLogo from './assets/react.svg'
+
+
 import './App.css'
 import {Title} from "./title/Title";
 
-type TitleProps = {
-  title: string;
-};
+class Person {
+    public name: string;
+    private lastName: any;
+    private address: string;
+    private phone: string;
+
+    constructor({name, lastName, phone, address}: Person) {
+        this.name = name;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.address = address;
+    };
+
+}
+
+function NewComponent() {
+    return <>
+        <h1>Vite + Reacts</h1>
+
+
+        <h1>this is so amazing</h1>
+    </>;
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-          <Title title={"carlos"} />
-      </div>
-      <h1>Vite + Reacts</h1>
-      <p>this is so amazing</p>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    return (
+        <div className="App">
+            <NewComponent/>
+            <div className="card">
+                <button onClick={() => setCount((count) => count + 1)}>
+                    count is
+
+                    {count}
+                </button>
+                <p>
+                    Edit <code>src/App.tsx</code> and save to test HMR
+                </p>
+            </div>
+            <Title title={"carlos"}/>
+            <p className="read-the-docs">
+                Click on the Vite and React logos to learn more
+            </p>
+        </div>
+    )
 }
 
 export default App
