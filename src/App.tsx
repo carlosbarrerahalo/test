@@ -24,6 +24,7 @@ function NewComponent() {
         <h1>Vite + Reacts</h1>
 
         <h1>carlos</h1>
+        <h1>carlos</h1>
         <h1>this is so amazing</h1>
     </>;
 }
