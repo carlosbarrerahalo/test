@@ -25,6 +25,7 @@ function NewComponent() {
 
         <h1>carlos</h1>
         <h1>carlos</h1>
+        <p>charlbarrera</p>
         <h1>this is so amazing</h1>
     </>;
 }
